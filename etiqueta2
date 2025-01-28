@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    cout<<"Nome: Werônica \n"
+    "Endereço: Rua tal de tal \n"
+    "CEP: 0000-0000 \n"
+    "Tel: (11) 9573-6248";
+    
+    return 0;
+    
+}
