@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    char letra;
+    letra = 'A';
+    
+    cout << "A primeira letra do alfabeti é: " << letra << endl;
+    
+    return 0;
+}
