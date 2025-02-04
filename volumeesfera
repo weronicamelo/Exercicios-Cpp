@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    float raio, volume;
+    
+    cout << "Entre com o raio de uma esfera: ";
+    cin >> raio;
+    
+    volume = (4.0 / 3.0) * 3.14159 * (raio * raio * raio);
+    
+    cout << "O volume da esfera é: " << volume;
+    
+    return 0;
+}

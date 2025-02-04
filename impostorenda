@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   
+    float salarioBruto, imposto, salarioLiquido;
+
+    cout << "Digite o valor do seu salário bruto: R$ ";
+    cin >> salarioBruto;
+
+    imposto = salarioBruto * 0.275;
+    salarioLiquido = salarioBruto - imposto;
+
+    cout << "Salário bruto: R$ " << salarioBruto << endl;
+    cout << "Imposto de renda (27,5%): R$ " << imposto << endl;
+    cout << "Salário líquido: R$ " << salarioLiquido << endl;
+
+    return 0;
+}
