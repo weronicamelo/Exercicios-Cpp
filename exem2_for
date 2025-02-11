@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int aux, num_materias;
+    float nota;
+    
+    cout << "Digite a quantidade de matérias: ";
+    cin >> num_materias;
+    
+    for(aux = 1; aux <= num_materias; aux++) {
+        cout << "Nota " << aux << " : ";
+        cin >> nota;
+    }
+    
+    return 0;   
+}

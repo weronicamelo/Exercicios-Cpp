@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int numero, aux = 1;
+    
+    cout << "... TABUADA ...\n";
+    cout << "Digite um número: ";
+    cin >> numero;
+    
+    while(aux <= 10) {
+        cout << numero << " X " << aux << " = " << numero * aux << endl;
+        aux++;
+    
+    }    
+    return 0;
+}
