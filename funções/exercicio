@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+float soma(float a, float b) {
+    return a + b;
+}
+
+float subtracao(float a, float b) {
+    return a - b;
+}
+
+float divisao(float a, float b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        cout << "Erro: o divisor precisa ser diferente de 0." << endl;
+        return 0; 
+    }
+}
+
+float multiplicacao(float a, float b) {
+    return a * b;
+}
+
+void menu() {
+    cout << "---- Calculadora ----\n";
+    cout << "1. Soma\n";
+    cout << "2. Subtração\n";
+    cout << "3. Multiplicação\n";
+    cout << "4. Divisão\n";
+    cout << "0. Sair\n";
+}
+
+int main() {
+    int opcao;
+    float a, b;
+
+    do {
+        menu(); 
+        cout << "Digite uma opção: ";
+        cin >> opcao;
+
+        if (opcao == 0) {
+            cout << "Encerrando...\n";
+            break;
+        } else if (opcao < 1 || opcao > 4) {
+            cout << "Opção inválida!\n" << endl;
+            continue;
+        }
+
+        cout << "Digite um número: ";
+        cin >> a;
+
+        cout << "Digite o segundo número: ";
+        cin >> b;
+
+        switch (opcao) {
+            case 1:
+                cout << "Resultado da soma: " << soma(a, b) << endl;
+                break;
+            case 2:
+                cout << "Resultado da subtração: " << subtracao(a, b) << endl;
+                break;
+            case 3:
+                cout << "Resultado da multiplicação: " << multiplicacao(a, b) << endl;
+                break;
+            case 4:
+                cout << "Resultado da divisão: " << divisao(a, b) << endl;
+                break;
+            default:
+                cout << "Opção inválida." << endl;
+        }
+    } while (true);
+
+    return 0;
+}
