@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int valor1 = 10;
+    int valor2 = 20;
+    int valor3 = 30;
+    
+    cout << "A média dos números é: " << valor1 + valor2 + valor3 / 3;
+    
+    return 0;
+}

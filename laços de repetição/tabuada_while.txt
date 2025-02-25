@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero, fim, i = 1;
+
+    cout << "Digite um número para exibir a tabuada: ";
+    cin >> numero;
+    cout << "Digite até qual número deseja exibir a tabuada: ";
+    cin >> fim;
+
+    while (i <= fim) {
+        cout << numero << " x " << i << " = " << numero * i << endl;
+        i++;
+    }
+
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    double matematica, fisica, quimica, portugues, ingles, media;
+    double pesoMatematica = 3.0;
+    double pesoFisica = 2.5;
+    double pesoQuimica = 2.5;
+    double pesoPortugues = 1.0;
+    double pesoIngles = 1.0;
+    
+    cout << "Informe a nota de Matemática: ";
+    cin >> matematica;
+    
+    cout << "Informe a nota de Física: ";
+    cin >> fisica;
+    
+    cout << "Informe a nota de Química: ";
+    cin >> quimica;
+    
+    cout << "Informe a nota de Português: ";
+    cin >> portugues;
+    
+    cout << "Informe a nota de Inglês: ";
+    cin >> ingles;
+    
+    media = (matematica * pesoMatematica + fisica * pesoFisica + quimica * pesoQuimica + portugues * pesoPortugues + ingles * pesoIngles) 
+    / (pesoMatematica + pesoMisica + pesoQuimica + pesoPortugues + pesoIngles);
+    
+    cout << "A média ponderada do aluno é: " << media << endl;
+    
+    return 0;
+}

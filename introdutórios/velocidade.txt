@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    double velocidade, velocidadeMax;
+
+    cout << "Digite a velocidade maxima permitida na via (em km/h): ";
+    cin >> velocidadeMax;
+
+    velocidade = velocidadeMax * 1.12;
+
+    cout << "A velocidade maxima permitida sem multa, considerando 12% de tolerancia, é: " << velocidade << " km/h." << endl;
+
+    return 0;
+}

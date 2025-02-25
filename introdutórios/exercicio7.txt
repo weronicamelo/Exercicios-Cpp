@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    cout << 10 + 20 + 30 / 3;
+    //O resultado é 40 dessa operção. Mas o resultado deveria ser 60 e a média 20. Pois, está sem os parênteses separando as operações.  
+
+    return 0;
+}

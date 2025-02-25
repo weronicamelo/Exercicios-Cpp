@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int maiorNumero, numero;
+
+    cout << "Digite o 1 número: ";
+    cin >> maiorNumero;
+
+    for (int i = 2; i <= 5; i++) {
+        cout << "Digite o " << i <<  " número: ";
+        cin >> numero;
+        
+        if (numero > maiorNumero) {
+            maiorNumero = numero;
+        }
+    }
+
+    cout << "O maior número é: " << maiorNumero << endl;
+
+    return 0;
+}

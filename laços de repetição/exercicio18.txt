@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Imprime os números de 1 a 20, um abaixo do outro
+    for (int i = 1; i <= 20; i++) {
+        cout << i << endl;
+    }
+    
+    cout << endl; 
+    
+    // Imprime os números de 1 a 20, um do lado do outro
+    for (int i = 1; i <= 20; i++) {
+        cout << i << " ";
+    }
+
+    return 0;
+}

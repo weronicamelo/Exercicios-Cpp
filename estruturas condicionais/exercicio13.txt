@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char opcao;
+    int numero1, numero2, conta;
+    
+    cout << "Digite um nÃºmero: ";
+    cin >> numero1;
+    
+    cout << "Digite o segundo nÃºmero: ";
+    cin >> numero2;
+    
+    cout << "\n---- Escolha uma das opÃ§Ã£o ----\n";
+    cout << "+ : AdiÃ§Ã£o\n";
+    cout << "- : SubtraÃ§Ã£o\n";
+    cout << "* : MultiplicaÃ§Ã£o\n";
+    cout << "/ : DivisÃ£o\n";
+    cin >> opcao;
+    
+    switch(opcao) {
+        case '+':
+            conta = numero1 + numero2;
+            cout << "A adiÃ§Ã£o dos nÃºmeros Ã©: " << conta;
+        break;
+        case '-':
+            conta = numero1 - numero2;
+            cout << "A subtraÃ§Ã£o dos nÃºmeros Ã©: " << conta;
+        break;
+        case '*':
+            conta = numero1 * numero2;
+            cout << "A multiplicaÃ§Ã£o dos nÃºmero Ã©: " << conta;
+        break;
+        case '/': 
+            conta = numero1 / numero2;
+            cout << "A divisÃ£o dos nÃºmeros Ã©: " << conta;
+        break;
+        default:
+            cout << "OpÃ§Ã£o invÃ¡lida!";
+            
+    return 0;
+    }
+}

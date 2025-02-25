@@ -1,0 +1,9 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    cout<<"      X \n" "    X    X \n" "  X        X \n" "X            X \n" "X X X X X X X X" ;
+    
+    return 0;
+}

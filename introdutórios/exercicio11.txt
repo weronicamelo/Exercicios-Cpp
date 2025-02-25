@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    float num1, num2, area;
+    
+    cout << "Digite a base e a altura do retangulo: ";
+    cin >> num1 >> num2;
+    
+    area = num1 * num2;
+    
+    cout << "A area do retangulo é: " << area;
+    
+    return 0;
+}

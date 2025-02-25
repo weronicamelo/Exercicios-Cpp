@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int idade;
+    idade = 20;
+    
+    cout << "Minha idade é: " << idade << endl;
+    
+    return 0;
+}

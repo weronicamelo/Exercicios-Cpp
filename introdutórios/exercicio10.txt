@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    float lado, area;
+    
+    cout << "Entre com um lado do quadrado: ";
+    cin >> lado;
+    
+    area = lado * lado;
+    
+    cout << "O resultado é: " << area;
+    
+    return 0;
+}

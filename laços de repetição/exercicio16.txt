@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, aux;
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+    
+    cout << "Números no intervalo de " << num1 << " a " << num2 << " são: ";
+    for (int i = num1 + 1; i < num2; i++) {
+        cout << i << " ";
+    }
+    
+    cout << endl;
+    return 0;
+}

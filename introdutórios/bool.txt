@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    bool verdade;
+    verdade = true;
+    
+    cout << "O valor true em C++ é: " << verdade << endl;
+    
+    return 0;
+}

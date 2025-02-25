@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    float porcentagem, valorBase, resultado;
+    
+    cout << "Digite o valor da porcentagem: ";
+    cin >> porcentagem;
+
+    cout << "Digite o valor base: ";
+    cin >> valorBase;
+
+    resultado = (porcentagem / 100) * valorBase;
+
+    cout << "O valor correspondente a " << porcentagem << "% de " << valorBase << " é: " << resultado << endl;
+
+    return 0;
+    
+}
