@@ -1,0 +1,14 @@
+#include <iostream> 
+using namespace std;
+
+void imprime(){
+    int varLocal = 2;
+    cout << varLocal;
+}
+
+int main(){
+    int varLocal = 1;
+    imprime();
+    cout << "\nDentro da main: " << varLocal;
+    return 0;
+}
