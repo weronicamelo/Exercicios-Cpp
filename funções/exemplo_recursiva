@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+void recursiva(int counter){
+    if(counter > 0){
+        cout << "Função Recursiva!\n";
+        recursiva(counter - 1);
+    }
+}
+
+int main(){
+    recursiva(5);
+    return 0;
+}

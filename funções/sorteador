@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+    
+    unsigned seed = time(0);
+    srand(seed);
+    
+    int inicio, fim, qtd;
+    
+    cout << "Digite o início do sorteio: ";
+    cin >> inicio;
+    cout << "Digite o número máximo do sorteio: ";
+    cin >> fim;
+    cout << "Digite quantos números deseja sortear: ";
+    cin >> qtd;
+    
+    for(int i = 1; i <= qtd; i++){
+    cout << (rand()%fim - inicio + 1) + inicio << endl;
+    }
+    
+    return 0;
+}

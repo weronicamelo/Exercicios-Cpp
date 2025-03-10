@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+    
+    cout << "A main() começou...\n";
+    cout << "Chamando a função exit()...\n";
+    exit(0);
+    cout << "Depois da função exit()\n";
+    
+    return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+    
+    cout << "Intervalo é: 0 - " << RAND_MAX << endl;
+    
+    return 0;
+}

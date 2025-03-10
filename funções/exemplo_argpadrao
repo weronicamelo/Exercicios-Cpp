@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+float sum(float a, float b, float c = 0, float d = 0.0){
+    return a + b + c + d;
+}
+
+int main(){
+    cout << sum(1, 2) << endl;
+    cout << sum(1, 2, 3) << endl;
+    cout << sum(1, 2, 3, 4) << endl;
+    
+    return 0;
+}

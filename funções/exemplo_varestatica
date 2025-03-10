@@ -1,0 +1,17 @@
+#include <iostream> 
+using namespace std;
+
+void text(){
+   static int myVar = 1;
+    
+    cout << myVar << endl;
+    myVar++;
+}
+
+int main(){
+    
+    test();
+    test();
+    
+    return 0;
+}
