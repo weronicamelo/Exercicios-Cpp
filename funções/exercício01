@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+float hipotenusa(float a, float b){
+    float aux;
+    return sqrt(aux = (a * a) + (b * b));
+}
+
+int main()
+{
+    float a, b;
+    
+    cout << "Digite o primeiro lado do retângulo: ";
+    cin >> a;
+    cout << "Digite o segundo lado do retângulo: ";
+    cin >> b;
+    
+    cout << "A hipotenusa do triângulo é: " << hipotenusa(a, b);
+     
+    return 0;
+}

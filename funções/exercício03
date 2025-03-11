@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+void moeda(int n){
+    int cara = 0, coroa = 0;
+    
+    for(int i = 1; i <= n; i++){
+        bool resultado = rand() % 2;
+        if(resultado){
+            cara++;
+        }else{
+            coroa++;
+        }
+    }
+    
+    cout << "A quantidade de caras é de: " << cara << " vez que é = ("  << (cara * 100.0 / n) << "%)" << endl;
+    cout << "A quantidade de coroas é de: "<<  coroa << " vez que é = (" << (coroa * 100.0 / n) << "%)" << endl;
+}
+
+int main(){
+    
+    srand(time(0));
+    
+    int n;
+    
+    cout << "Digite o número de lançamentos de moedas: ";
+    cin >> n;
+    
+    moeda(n);
+    
+    return 0;
+}
