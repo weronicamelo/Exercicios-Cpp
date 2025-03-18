@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    int recorde = 1000; 
+    char jogarNovamente;
+    
+    srand(time(0));
+
+    do {
+        int numeroSorteado = rand() % 100 + 1; 
+        int chute, tentativas = 0;
+
+        cout << "Tente adivinhar o numero entre 1 e 100!" << endl;
+
+        do {
+            cout << "Digite seu chute: ";
+            cin >> chute;
+            tentativas++;
+
+            if (chute < numeroSorteado) {
+                cout << "Seu chute foi abaixo do numero!" << endl;
+            } else if (chute > numeroSorteado) {
+                cout << "Seu chute foi acima do numero!" << endl;
+            } else {
+                cout << "Parabens! Voce acertou o numero!" << endl;
+                cout << "Numero de tentativas: " << tentativas << endl;
+
+                if (tentativas < recorde) {
+                    recorde = tentativas;
+                    cout << "Novo recorde!" << endl;
+                } else {
+                    cout << "Nao bateu o recorde. O recorde atual e: " << recorde << endl;
+                }
+            }
+
+        } while (chute != numeroSorteado);
+
+        cout << "Quer jogar novamente? (s/n): ";
+        cin >> jogarNovamente;
+
+    } while (jogarNovamente == 's' || jogarNovamente == 'S');
+
+    cout << "Obrigado por jogar! O recorde atual e: " << recorde << " tentativas." << endl;
+
+    return 0;
+}

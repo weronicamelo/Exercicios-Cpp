@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int pontosUsuario = 0;
+int pontosComputador = 0;
+
+void jogarRodada() {
+    int escolhaUsuario, numeroUsuario;
+
+    do {
+        cout << "Escolha 0 para Par ou 1 para Ímpar: ";
+        cin >> escolhaUsuario;
+        if (escolhaUsuario != 0 && escolhaUsuario != 1) {
+            cout << "Escolha inválida! Tente novamente.\n";
+        }
+    } while (escolhaUsuario != 0 && escolhaUsuario != 1);
+
+    cout << "Digite um número de 0 a 10: ";
+    cin >> numeroUsuario;
+
+    int numeroComputador = rand() % 11; 
+    int soma = numeroUsuario + numeroComputador;
+
+    cout << "\nVocê escolheu: " << numeroUsuario << "\nComputador escolheu: " << numeroComputador << "\nSoma: " << soma << endl;
+
+    if ((soma % 2 == 0 && escolhaUsuario == 0) || (soma % 2 != 0 && escolhaUsuario == 1)) {
+        cout << "Você ganhou esta rodada!\n";
+        pontosUsuario++;
+    } else {
+        cout << "O computador ganhou esta rodada!\n";
+        pontosComputador++;
+    }
+
+    cout << "\n*** Placar do jogo: ***\n";
+    cout << "Você: "  << pontosUsuario << " | Computador: " << pontosComputador << endl;
+}
+
+int main() {
+    srand(time(0)); 
+
+    char jogarNovamente;
+    
+    cout << "--------------------------------------------\n";
+    cout << "---- Bem-vindo(a) ao Jogo de Par ou Ímpar! ----";
+    cout << "\n--------------------------------------------" << endl;
+    cout << "" << endl;
+
+    do {
+        jogarRodada();
+
+        cout << "Jogar novamente? (s/n): ";
+        cin >> jogarNovamente;
+
+    } while (jogarNovamente == 's' || jogarNovamente == 'S');
+
+    cout << "\n===== Jogo Encerrado! =====" << endl;
+    cout << "Placar final: \n";
+    cout << "Você: " << pontosUsuario << " | Computador: " << pontosComputador << endl;
+    cout << "===========================\n";
+    cout << "Obrigado por jogar! Até logo.\n";
+    
+    return 0;
+}

@@ -1,0 +1,67 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+string vencedor(int jogador, int computador){
+    if (jogador == computador) {
+        return "Empate!";
+    } else if ((jogador == 1 && computador == 3) || (jogador == 2 && computador == 1) || (jogador == 3 && computador == 2)){
+        return "\n==== Você venceu! ====";
+    } else {
+        return "\n==== Computador venceu! ====";
+    }
+}
+
+string exibirEscolha(int escolha){
+    switch (escolha) {
+        case 1:
+            return "Pedra";
+        case 2:
+            return "Papel";
+        case 3:
+            return "Tesoura";
+        default:
+            return "Inválido";
+    }
+}
+
+int main(){
+    srand(time(0));
+
+    int jogador, computador;
+    char jogarNovamente;
+
+    do {
+        cout << ".............................................." << endl;
+        cout << " Bem-vindo(a) ao jogo Pedra, Papel e Tesoura!" << endl;
+        cout << "..............................................\n";
+        cout << "Escolha uma opção:" << endl;
+        cout << "1 - Pedra" << endl;
+        cout << "2 - Papel" << endl;
+        cout << "3 - Tesoura" << endl;
+        cout << "Sua escolha: ";
+        cin >> jogador;
+
+        while (jogador < 1 || jogador > 3) {
+            cout << "Escolha inválida! Tente novamente." << endl;
+            cout << "\nSua escolha: ";
+            cin >> jogador;
+        }
+
+        computador = rand() % 3 + 1; 
+
+        cout << "Você escolheu: " << exibirEscolha(jogador) << endl;
+        cout << "Computador escolheu: " << exibirEscolha(computador) << endl;
+        cout << vencedor(jogador, computador) << endl;
+
+        cout << "\nDeseja jogar novamente? (s/n): " << endl;
+        cin >> jogarNovamente;
+    } while (jogarNovamente == 's' || jogarNovamente == 'S');
+    
+    cout << "..............................\n";
+    cout << "Obrigado por jogar! Até logo!" << endl;
+
+    return 0;
+}

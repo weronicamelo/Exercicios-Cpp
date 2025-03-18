@@ -1,0 +1,62 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+void lancamentoDado(int lances){
+int aux1 = 0, aux2 = 0, aux3 = 0, aux4 = 0, aux5 = 0, aux6 = 0;
+
+    for (int i = 0; i < lances; i++) {
+        switch (rand() % 6 + 1) { 
+            case 1: 
+                aux1++; 
+            break;
+            case 2: 
+                aux2++; 
+            break;
+            case 3:
+                aux3++; 
+            break;
+            case 4: 
+                aux4++; 
+            break;
+            case 5: 
+                aux5++;
+            break;
+            case 6: 
+                aux6++;
+            break;
+        }
+    }
+    
+        cout << "\nResultados dos lançamentos:" << endl;
+        cout << "Número 1: " << aux1 << " vezes" << endl;
+        cout << "Número 2: " << aux2 << " vezes" << endl;
+        cout << "Número 3: " << aux3 << " vezes" << endl;
+        cout << "Número 4: " << aux4 << " vezes" << endl;
+        cout << "Número 5: " << aux5 << " vezes" << endl;
+        cout << "Número 6: " << aux6 << " vezes" << endl;
+}    
+    
+int main() {
+    srand(time(0)); 
+
+    int lances;
+    cout << "============================================" <<endl;
+    cout << "     Bem-vindo(a) ao simulador de dados!" << endl;
+    cout << "============================================" << endl;
+    cout << "Quantas vezes você deseja lançar o dado? ";
+    cin >> lances;
+
+    cout << "Lançando o dado " << lances << " vezes..." << endl;
+    
+    if (lances <= 0) {
+        cout << "A quantidade de lançamentos deve ser maior que zero. Tente novamente." << endl;
+        return 1;
+    }
+    
+    lancamentoDado(lances);
+
+    return 0;
+}
