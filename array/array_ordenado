@@ -1,0 +1,45 @@
+#include <iostream>
+#include <random>
+
+using namespace std;
+
+int gen(){
+    random_device rd;
+    mt19937 gen_numb(rd());
+    uniform_int_distribution <> dis(1, 100);
+    
+    return dis(gen_numb);
+}
+
+int main() {
+    
+    int size = 10, prev, next, aux;
+    int num[size];
+    
+    for(aux = 0; aux < size; aux++){
+        num[aux] = gen();
+    }
+    
+    cout << "Array original: \n";
+    for(aux = 0; aux < size; aux++){
+        cout << num[aux] << " ";
+    }
+    
+    for(prev = 0; prev <= size -2; prev++){
+        for(next = prev + 1; next <= size - 1; next++){
+            aux = num[prev];
+            
+            if(num[prev] > num[next]){
+                num[prev] = num[next];
+                num[next] = aux;
+            }
+        }
+    }
+    
+    cout << "\n\nArray ordenado: \n";
+    for(aux = 0; aux < size; aux++){
+        cout << num[aux] << " ";
+    }
+    
+    return 0;
+}
