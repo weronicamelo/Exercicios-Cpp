@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+void mediaNotas(float medias[], int tamanho) {
+    for (int i = 0; i < tamanho; i++) {
+        cout << "Média do aluno " << i + 1 << ": ";
+        cin >> medias[i];
+    }
+}
+
+string situacaoAluno(float media) {
+    if (media >= 7.0) {
+        return "Aprovado";
+    } else if (media <= 5.0) {
+        return "Reprovado";
+    } else {
+        return "Recuperação";
+    }
+}
+
+int main() {
+    const int total = 10;
+    float medias[total];
+    
+    cout << "Digite a média final de 10 alunos\n";
+    mediaNotas(medias, total);
+    
+    cout << "\nResultados:\n";
+    for (int i = 0; i < total; i++) {
+        string situacao = situacaoAluno(medias[i]);
+        cout << "Aluno " << i + 1 << ": Média = " << medias[i] << " - " << situacao << endl;
+    }
+
+    return 0;
+}

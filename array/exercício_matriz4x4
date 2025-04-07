@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+const int COLS = 4; // matérias
+const int ROWS = 4; // alunos
+
+string materias[COLS] = {"Matemática", "Português", "História", "Ciências"};
+
+void entrarNotas(float notas[ROWS][COLS]){
+    for(int i = 0; i < ROWS; i++){
+        for(int j = 0; j < COLS; j++){
+            cout << "Digite a nota do aluno " << i + 1 << " na materia " << j + 1 << ": ";
+            cin >> notas[i][j];
+        }
+    }
+}
+
+void resultadoNotas(float notas[ROWS][COLS]){
+    float somaGeral = 0;
+    
+    cout << "Notas dos Alunos\n";
+    for (int i = 0; i < ROWS; i++) {
+        float somaAluno = 0;
+        cout << "Aluno " << i + 1 << ": ";
+        for (int j = 0; j < COLS; j++) {
+            cout << notas[i][j] << " ";
+            somaAluno += notas[i][j];
+        }
+        float mediaAluno = somaAluno / COLS;
+        cout << "| Média: " << mediaAluno << endl;
+        somaGeral += somaAluno;
+    }
+
+    cout << "\nMédia da Turma por Matéria\n";
+    for (int j = 0; j < COLS; j++) {
+        float somaMateria = 0;
+        for (int i = 0; i < ROWS; i++) {
+            somaMateria += notas[i][j];
+        }
+        float mediaMateria = somaMateria / ROWS;
+        cout << "Matéria " << j + 1 << ": " << mediaMateria << endl;
+    }
+
+    float mediaGeral = somaGeral / (ROWS * COLS);
+    cout << "\nA Média Geral da Turma é: \n" << mediaGeral;
+}
+
+int main(){
+    float notas[ROWS][COLS];
+    entrarNotas(notas);
+    resultadoNotas(notas);
+    
+    return 0;
+}

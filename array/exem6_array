@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+const int COLS = 3;
+const int ROWS = 3;
+
+void init(int matriz[][COLS]){
+    for(int i = 0; i < ROWS; i++){
+        for(int j = 0; j < COLS; j++){
+            cout << "Matriz[" << i << "][" << j << "]: ";
+            cin >> matriz[i][j];
+        }
+    }
+}
+
+void show(int matriz[][COLS]){
+    for(int i = 0; i < ROWS; i++){
+        for(int j = 0; j < COLS; j++){
+          cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main(){
+    
+    int matriz[ROWS][COLS] = {};
+    
+    init(matriz);
+    show(matriz);
+    
+    return 0;
+}
